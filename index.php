@@ -1,5 +1,7 @@
 <?php
 require 'partials/dbconnect.php';
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -17,7 +19,7 @@ require 'partials/dbconnect.php';
 </head>
 
 <body>
-  <?php include "partials/_header.php"; ?>
+  <?php include "partials/_header.php";  ?>
 
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

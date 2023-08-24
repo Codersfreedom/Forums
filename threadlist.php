@@ -60,16 +60,25 @@ while ($row = mysqli_fetch_assoc($result)) {
 </div>
 
 <div class="container">
-<div class="media">
+<?php
+
+$sql = "SELECT * FROM `thread` WHERE `thread_cat` = $id";
+$result = mysqli_query($conn, $sql);
+
+while ($row = mysqli_fetch_assoc($result)) {
+  $thread_title = $row['thread_title'];
+  $thread_desc = $row['thread_des'];
+  echo '
+<div class="media my-4">
 
   <img class="mr-3" width="35px"  src="img/userimg.png" alt="Generic placeholder image">
   <div class="media-body">
-    <h5 class="mt-0">Media heading</h5>
-    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    <a href="#"><h5 class="mt-0">' .$thread_title. '</h5></a>
+   ' .$thread_desc. '
   </div>
-</div>
-
-
+</div>';
+}
+?>
 </div>
 
 

@@ -9,16 +9,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form action="partials/loginhandle.php" method ="post">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <label for="user">Email address</label>
+                        <input type="email" class="form-control" id="user" name="user" aria-describedby="emailHelp"
                             placeholder="Enter email">
                 
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <label for="pass">Password</label>
+                        <input type="password" class="form-control" id="pass" name= "pass" placeholder="Password">
                     </div>
                  
                  
