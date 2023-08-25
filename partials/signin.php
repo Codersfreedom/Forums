@@ -12,7 +12,7 @@
                 <form action="partials/loginhandle.php" method ="post">
                     <div class="form-group">
                         <label for="user">Email address</label>
-                        <input type="email" class="form-control" id="user" name="user" aria-describedby="emailHelp"
+                        <input type="text" class="form-control" id="user" name="user" aria-describedby="emailHelp"
                             placeholder="Enter email">
                 
                     </div>

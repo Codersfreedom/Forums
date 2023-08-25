@@ -5,8 +5,10 @@ $signup = false;
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $username = $_POST['user'];
+    $nickname =$_POST['username'];
     $password = $_POST['pass'];
     $cpassword = $_POST['cpass'];
+    
 
     // checking for duplicate username
 
@@ -20,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         if ($password == $cpassword) {
             $hash = password_hash($password,PASSWORD_DEFAULT);
-            $sql = "INSERT INTO `user`( `username`, `password`) VALUES ('$username','$hash')";
+            $sql = "INSERT INTO `user`( `username`, `password`,`neckname`) VALUES ('$username','$hash','$nickname')";
             $result = mysqli_query($conn, $sql);
 
             if ($result) {

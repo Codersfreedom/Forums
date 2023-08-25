@@ -16,6 +16,12 @@
 
       <div class="modal-body">
         <form action ="partials/signuphandle.php" method = "post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp"
+              placeholder="Enter a username">
+              <small id="emailHelp" class="form-text text-muted">Your usrname will be displayed to your comments.</small>
+</div>
           <div class="form-group">
             <label for="user">Email address</label>
             <input type="email" class="form-control" id="user" name="user" aria-describedby="emailHelp"
